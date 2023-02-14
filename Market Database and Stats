@@ -1,0 +1,37 @@
+--Create a shirt store database
+
+
+CREATE TABLE market (id INTEGER PRIMARY KEY, item TEXT, flavor TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO market VALUES (1,"apples","sweet",0.99, 54),
+INSERT INTO market VALUES (2,"zuchinnis","neutral".1.25, 33),
+INSERT INTO market VALUES (3,"jalapenos","spicy",0.15,65 , 
+INSERT INTO market VALUES (4,"serrano_peppers","spicy",0.10, 25);
+INSERT INTO market VALUES (5,"oranges","sweet",0.99, 76);
+INSERT INTO market VALUES (6,"lettuce","neutral:,2.00, 54);
+INSERT INTO market VALUES (7,"potato","neutral",0.33, 83);
+INSERT INTO market VALUES (8,"banana","sweet",0.17, 105);
+INSERT INTO market VALUES (9,"onions","bleh",0.99, 66);
+INSERT INTO market VALUES (10,"papaya","sweet",4.00, 23;
+INSERT INTO market VALUES (11,"strawberry","sweet",4.99, 47);
+INSERT INTO market VALUES (12,"cantaloup","sweet",2.99, 21);
+INSERT INTO market VALUES (13,"watermelon","sweet",4.99, 33);
+INSERT INTO market VALUES (14,"mango","sweet", 1.25, 18);
+INSERT INTO market VALUES (15,"limes","bleh",0.10, 79);
+
+--display the database ordered by price. 
+SELECT * FROM market
+ORDER BY price desc; 
+
+--what is the sum price of sweet flavored items? 
+SELECT SUM(price) "sum of sweet orders"
+FROM market
+WHERE SECTION = "sweet";
+
+--what are the most 5 popular items? 
+SELECT item, price, popularity
+FROM market
+order by popularity desc
+limit 5; 
+
+
